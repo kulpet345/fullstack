@@ -12,6 +12,7 @@ import {Index} from "./views/Index";
 import {BookSearchContainer} from "./components/BookSearch";
 import {bookStore} from "./reducers";
 import axios from "axios";
+import {Login} from "./components/Login";
 
 
 const books = [
@@ -38,6 +39,9 @@ ReactDOM.render(
                 </Route>
                 <Route path="/all">
                     <BookDisplayContainer books={books}/>
+                </Route>
+                <Route path="/login">
+                    <Login/>
                 </Route>
                 <Route path="/" component={Index}/>
             </Switch>

@@ -41,8 +41,13 @@ public class BookController {
                 .build();
     }
 
+    @GetMapping("/all-books")
+    public List<Book> allBooks() {
+        return book_serv.getAll();
+    }
+
     @GetMapping("/user-pastes")
-    public List<MetaInformation> getCodesByUser() {
+    public List<MetaInformation> getBooksByUser() {
         UserDetails user_det = (UserDetails)SecurityContextHolder
                 .getContext().getAuthentication()
                 .getPrincipal();
@@ -77,7 +82,7 @@ public class BookController {
         Book book = book_serv.getById(id).get();
 
         if (!book.getUserid().equals(user.getId())) {
-            throw new RuntimeException("This is not your code");
+            throw new RuntimeException("not your book");
         }
 
         book_serv.deleteById(id);

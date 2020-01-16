@@ -7,7 +7,7 @@ export function Navigation() {
             <Link to={"/"}>Главная</Link>
             <Link to={"/search"}>Поиск книг</Link>
             <Link to={"/all"}>Все книги</Link>
-            <Link to={"/top"}>Топ книг</Link>
+            <Link to={"/login"}>Войти</Link>
         </header>
     );
 }
