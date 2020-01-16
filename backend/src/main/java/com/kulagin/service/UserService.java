@@ -10,23 +10,23 @@ import java.util.Optional;
 
 @Service
 public class UserService {
-    private final UserRepository userRepository;
+    private final UserRepository UserRepository;
 
     @Autowired
     public UserService(UserRepository repository) {
-        this.userRepository = repository;
+        this.UserRepository = repository;
     }
 
     public List<User> getAll() {
-        List<User> users = userRepository.findAll();
+        List<User> users = UserRepository.findAll();
         return users;
     }
 
     public void addUser(User user) {
-        userRepository.save(user);
+        UserRepository.save(user);
     }
 
     public Optional<User> findByName(String username) {
-        return this.userRepository.findByUsername(username);
+        return this.UserRepository.findByUsername(username);
     }
 }

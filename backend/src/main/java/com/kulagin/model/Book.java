@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.sql.Timestamp;
 
-@Entity(name = "Book")
+@Entity(name = "Bookw")
 @Data
 @Builder
 @AllArgsConstructor
@@ -24,6 +24,9 @@ public class Book {
     String author;
 
     @Column(name = "user_id")
-    String userid;
+    Long userid;
+
+    @Column(name = "img")
+    String img;
 }
 
