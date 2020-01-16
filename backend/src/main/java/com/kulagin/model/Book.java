@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.sql.Timestamp;
 
-@Entity(name = "Bookw")
+@Entity(name = "Book")
 @Data
 @Builder
 @AllArgsConstructor
