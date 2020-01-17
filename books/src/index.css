@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+body {
+  background: url("./img/bg.jpg");
+}
+
 header {
   background: gray;
   display: flex;

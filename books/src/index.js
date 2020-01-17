@@ -41,7 +41,9 @@ ReactDOM.render(
                     <BookDisplayContainer books={books}/>
                 </Route>
                 <Route path="/login">
-                    <Login/>
+                    <div style={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+                        <Login/>
+                    </div>
                 </Route>
                 <Route path="/" component={Index}/>
             </Switch>
